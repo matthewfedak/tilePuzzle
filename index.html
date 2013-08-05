@@ -21,6 +21,14 @@ h1 {
 .puzzle { 
     margin:0 auto;
 }
+pre { 
+    background:#fff;
+    padding:5px;
+    width:800px;
+    text-align: left;
+    margin:0 auto;
+    border-radius: 5px;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="css/tilePuzzle.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -30,14 +38,37 @@ h1 {
 $(document).ready(function(){
     $('#puzzle').tilePuzzle({
 		'level': 4,
-		'size': 600,
 		'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg'
 	});
 });
 </script>
 </head>
 <body>
+    <a href="https://github.com/matthewfedak/tilePuzzle"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 	<h1>tilePuzzle</h1>
 	<div class="puzzle" id="puzzle"></div>
+    <h2>How to use</h2>
+    <p>Include the following CSS and JavaScript files in your &lt;HEAD&gt;...</p>
+    <pre>
+        <!-- tilePuzzle basic css -->
+        &lt;link rel="stylesheet" type="text/css" href="css/tilePuzzle.css"&gt;
+        <!-- jQuery library-->
+        &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"&gt;&lt;/script&gt;
+        <!-- tilePuzzle plugin -->
+        &lt;script src="js/tilePuzzle.src.js"&gt;&lt;/script&gt;
+    </pre>
+    <p>...and assign the plugin to a div.</p>
+    <pre>
+        /* Apply plugin to an empty div, in this case a div with id 'puzzle' */
+        
+        $(document).ready(function(){
+
+            $('#puzzle').tilePuzzle({
+                'level': 4, // a level, can be 3+
+                'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg' // URL of an image
+            });
+
+        });
+    </pre>
 </body>
 </html>
