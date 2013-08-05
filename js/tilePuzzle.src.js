@@ -13,7 +13,7 @@
 
         var defaults = {
             keyAccess: false,
-            tileContainerClass: '.tiles',
+            tileContainerClass: 'tiles',
             level: 4
         };
 
@@ -33,7 +33,7 @@
 
                 var _this = this;
 
-                _this.container = $('<ul/>').addClass('tiles');
+                _this.container = $('<ul/>').addClass(tilePuzzle.tileContainerClass);
 
                 self.append(_this.container);
 
