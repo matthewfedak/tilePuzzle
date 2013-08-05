@@ -7,7 +7,7 @@ A live demo is at:
 
 http://matthewfedak.co.uk/tilePuzzle
 
-Todo
+To do
 =========
 
 - Use css animations to slide tiles, with JS fallback when no css transition support avaialble
