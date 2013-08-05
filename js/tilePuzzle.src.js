@@ -14,7 +14,8 @@
         var defaults = {
             keyAccess: false,
             tileContainerClass: 'tiles',
-            level: 4
+            level: 4,
+            width: 600
         };
 
         var construct = {
@@ -28,6 +29,8 @@
             tileDimensions : {},
 
             spareTile: null,
+
+            backgroundSize: null,
 
             init : function () {
 
@@ -63,6 +66,10 @@
                 img.onload = function(){
 
                     _this.imageDimensions = { 'width': this.width, 'height': this.height };
+
+                    if (_this.imageDimensions.width > _this.width) {
+
+                    }
 
                     _this.createTiles();
 
@@ -124,31 +131,38 @@
 
             scrambleTiles : function (limit) {
 
-                var _this, i, tile1, tile2, tile1Position;
+                var _this, i, tile1, tile2, tile1Position, timer;
 
                 _this = this;
 
                 limit = limit*limit;
+                
+                i = 0;
 
-                for(i = 0;i<limit;i++){
+                setTimeout(function(){
+                    timer = setInterval(function(){
 
-                    tile1 = _this.container.children().eq(Math.floor((Math.random()*(tilePuzzle.level*tilePuzzle.level))+1));
+                        tile1 = _this.container.children().eq(Math.floor((Math.random()*(tilePuzzle.level*tilePuzzle.level))+1));
 
-                    tile2 = _this.container.children().eq(Math.floor((Math.random()*(tilePuzzle.level*tilePuzzle.level))+1));
-                    
-                    tile1Position = { 'top':tile1.css('top'), 'left':tile1.css('left') };
+                        tile2 = _this.container.children().eq(Math.floor((Math.random()*(tilePuzzle.level*tilePuzzle.level))+1));
+                        
+                        tile1Position = { 'top':tile1.css('top'), 'left':tile1.css('left') };
 
-                    tile1.css({
-                        'top': tile2.css('top'),
-                        'left': tile2.css('left')
-                    });
+                        tile1.css({
+                            'top': tile2.css('top'),
+                            'left': tile2.css('left')
+                        });
 
-                    tile2.css({
-                        'top': tile1Position.top,
-                        'left': tile1Position.left
-                    });
-
-                }
+                        tile2.css({
+                            'top': tile1Position.top,
+                            'left': tile1Position.left
+                        });
+                        i++;
+                        if(i>limit){
+                            clearInterval(timer);
+                        }
+                    }, 50);
+                }, 1000);
 
             },
 
