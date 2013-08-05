@@ -90,8 +90,7 @@
                             'width': _this.tileDimensions.width,
                             'height': _this.tileDimensions.height,
                             'background-image': 'url('+tilePuzzle.imageUrl+')',
-                            'background-position-y':'-'+(x*_this.tileDimensions.height)+'px',
-                            'background-position-x': '-'+(t*this.tileDimensions.width)+'px',
+                            'background-position':'-'+(t*this.tileDimensions.width)+'px -'+(x*_this.tileDimensions.height)+'px',
                             'top':(x*_this.tileDimensions.height)+'px',
                             'left':(n*_this.tileDimensions.width)+'px'
                             })
