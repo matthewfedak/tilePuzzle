@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+<title>tilePuzzle</title>
+<!-- set view port -->
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style type="text/css">
+html, body, ul {
+    margin:0;
+    padding:0;
+}
+body { 
+    background:#eee; 
+    font-family:Trebuchet Ms;
+    margin: 2%;
+    text-align: center;
+}
+h1 { 
+    text-align: center; 
+}
+.puzzle { 
+    margin:0 auto;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="css/tilePuzzle.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/tilePuzzle.src.js"></script>
+<script>
+/* Apply plugin to a div */
+$(document).ready(function(){
+    $('#puzzle').tilePuzzle({
+		'level': 4,
+		'size': 600,
+		'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg'
+	});
+});
+</script>
+</head>
+<body>
+	<h1>tilePuzzle</h1>
+	<div class="puzzle" id="puzzle"></div>
+</body>
+</html>
