@@ -15,7 +15,7 @@
             keyAccess: false,
             tileContainerClass: 'tiles',
             level: 4,
-            width: 600
+            maxWidth: 600
         };
 
         var construct = {
@@ -24,13 +24,9 @@
 
             imageDimensions : {},
 
-            numTiles: {},
-
             tileDimensions : {},
 
             spareTile: null,
-
-            backgroundSize: null,
 
             init : function () {
 
@@ -67,7 +63,11 @@
 
                     _this.imageDimensions = { 'width': this.width, 'height': this.height };
 
-                    if (_this.imageDimensions.width > _this.width) {
+                    if (_this.imageDimensions.width > _this.maxWidth) {
+                        
+                        var newHeight = (_this.maxWidth/_this.imageDimensions.width)*this.height;
+                        _this.imageDimensions.width = _this.maxWidth;
+                        _this.imageDimensions.height = newHeight;
 
                     }
 
@@ -98,6 +98,7 @@
                             'height': _this.tileDimensions.height,
                             'background-image': 'url('+tilePuzzle.imageUrl+')',
                             'background-position':'-'+(t*this.tileDimensions.width)+'px -'+(x*_this.tileDimensions.height)+'px',
+                            'background-size':_this.imageDimensions.width+'px '+_this.imageDimensions.height+'px',
                             'top':(x*_this.tileDimensions.height)+'px',
                             'left':(n*_this.tileDimensions.width)+'px'
                             })

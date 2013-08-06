@@ -3,7 +3,7 @@
 <title>tilePuzzle</title>
 <!-- set view port -->
 <meta name="format-detection" content="telephone=no" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <style type="text/css">
 html, body, ul {
     margin:0;
@@ -23,11 +23,12 @@ h1 {
 }
 pre { 
     background:#fff;
-    padding:5px;
-    width:800px;
     text-align: left;
     margin:0 auto;
     border-radius: 5px;
+    overflow-x:auto;
+    width:90%;
+    padding:1%;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="css/tilePuzzle.css">
@@ -38,13 +39,13 @@ pre {
 $(document).ready(function(){
     $('#puzzle').tilePuzzle({
 		'level': 4,
-		'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg'
+		'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg',
+        'maxWidth': $('#puzzle').width()
 	});
 });
 </script>
 </head>
 <body>
-    <a href="https://github.com/matthewfedak/tilePuzzle"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 	<h1>tilePuzzle</h1>
     <p>A simple jQuery plugin to create sliding tile puzzle game. Moving only tile at a time into the space, try and arrange the original picture.</p> 
 	<div class="puzzle" id="puzzle"></div>
@@ -66,10 +67,12 @@ $(document).ready(function(){
 
             $('#puzzle').tilePuzzle({
                 'level': 4, // a level, can be 3+
+                'maxWidth': 300, // could also be $(window).width() or width of puzzle container div
                 'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg' // URL of an image
             });
 
         });
     </pre>
+    <h2><a href="https://github.com/matthewfedak/tilePuzzle" target="_blank">Fork me GitHub!</a></h2>
 </body>
 </html>
