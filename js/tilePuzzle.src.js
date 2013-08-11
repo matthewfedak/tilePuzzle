@@ -177,7 +177,7 @@
 
                 leftDistance = Math.abs(parseInt(left)-parseInt(_this.spareTile.css('left')));
 
-                if((leftDistance+topDistance) <= _this.tileDimensions.width || (leftDistance+topDistance) <= _this.tileDimensions.height){
+                if((leftDistance+topDistance) <= Math.round(_this.tileDimensions.width) || (leftDistance+topDistance) <= Math.round(_this.tileDimensions.height)){
 
                     tile.css({
                         'top':_this.spareTile.css('top'),
