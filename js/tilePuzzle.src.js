@@ -1,8 +1,8 @@
 /*
-    tilePuzzle.src.js
-    
-    - A simple tile puzzle jQuery plugin by @matthewfedak
-*/
+ * tilePuzzle.src.js
+ *
+ * A simple tile puzzle jQuery plugin by @matthewfedak
+ */
 (function ($) {
 
     "use strict";
@@ -44,7 +44,7 @@
                 _this.loadRemoteImage();
 
                 _this.container.on('click', 'li', function(){
-                    
+
                     _this.moveTile($(this), $(this).css('top'), $(this).css('left'));
 
                 });
@@ -64,7 +64,7 @@
                     _this.imageDimensions = { 'width': this.width, 'height': this.height };
 
                     if (_this.imageDimensions.width > _this.maxWidth) {
-                        
+
                         var newHeight = (_this.maxWidth/_this.imageDimensions.width)*this.height;
                         _this.imageDimensions.width = _this.maxWidth;
                         _this.imageDimensions.height = newHeight;
@@ -103,7 +103,7 @@
                             'left':(n*_this.tileDimensions.width)+'px'
                             })
                     );
-                    
+
                     n++;
 
                     if (((t+1) % tilePuzzle.level) === 0) {
@@ -137,7 +137,7 @@
                 _this = this;
 
                 limit = limit*limit;
-                
+
                 i = 0;
 
                 setTimeout(function(){
@@ -146,7 +146,7 @@
                         tile1 = _this.container.children().eq(Math.floor((Math.random()*(tilePuzzle.level*tilePuzzle.level))+1));
 
                         tile2 = _this.container.children().eq(Math.floor((Math.random()*(tilePuzzle.level*tilePuzzle.level))+1));
-                        
+
                         tile1Position = { 'top':tile1.css('top'), 'left':tile1.css('left') };
 
                         tile1.css({
@@ -168,7 +168,7 @@
             },
 
             moveTile: function (tile, top, left) {
-                
+
                 var _this, topDistance, leftDistance, newSparePosition;
 
                 _this = this;

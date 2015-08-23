@@ -9,19 +9,19 @@ html, body, ul {
     margin:0;
     padding:0;
 }
-body { 
-    background:#eee; 
+body {
+    background:#eee;
     font-family:Trebuchet Ms;
     margin: 2%;
     text-align: center;
 }
-h1 { 
-    text-align: center; 
+h1 {
+    text-align: center;
 }
-.puzzle { 
+.puzzle {
     margin:0 auto;
 }
-pre { 
+pre {
     background:#fff;
     text-align: left;
     margin:0 auto;
@@ -38,18 +38,18 @@ pre {
 /* Apply plugin to a div */
 $(document).ready(function(){
     $('#puzzle').tilePuzzle({
-		'level': 4,
-		'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg',
+        'level': 4,
+        'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg',
         'maxWidth': $('#puzzle').width()
-	});
+    });
 });
 </script>
 </head>
 <body>
-	<h1>tilePuzzle</h1>
-    <p>A simple jQuery plugin to create a sliding tile puzzle game.</p> 
-    <p>Try and re-assemble the original picture by moving only one tile at a time into the empty space. Click or tap on a tile to move it.</p> 
-	<div class="puzzle" id="puzzle"></div>
+    <h1>tilePuzzle</h1>
+    <p>A simple jQuery plugin to create a sliding tile puzzle game.</p>
+    <p>Try and re-assemble the original picture by moving only one tile at a time into the empty space. Click or tap on a tile to move it.</p>
+    <div class="puzzle" id="puzzle"></div>
     <h2>How to use</h2>
     <p>Include the following CSS and JavaScript files in your &lt;HEAD&gt;...</p>
     <pre>
@@ -63,7 +63,7 @@ $(document).ready(function(){
     <p>...and assign the plugin to a div.</p>
     <pre>
         /* Apply plugin to an empty div, in this case a div with id 'puzzle' */
-        
+
         $(document).ready(function(){
 
             $('#puzzle').tilePuzzle({

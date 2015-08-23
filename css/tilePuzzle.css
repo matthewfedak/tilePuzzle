@@ -1,12 +1,12 @@
-/*
-    tilePuzzle.css
-*/
+/**
+ * tilePuzzle.css
+ */
 .tiles {
     position:relative;
     display: block;
     width:100%;
     height:100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .tiles li {
 	position:absolute;
@@ -17,7 +17,7 @@
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     box-shadow: inset 0 0 10px #000000;
-    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .tiles li:hover {
     opacity:0.7;
@@ -28,6 +28,6 @@
 .tiles :last-child:hover{
    opacity:0;
 }
-.tilePuzzle { 
+.tilePuzzle {
 	display:none;
 }
