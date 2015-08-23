@@ -7,10 +7,9 @@ A live demo is at:
 
 http://matthewfedak.co.uk/tilePuzzle
 
-To do
+Improvements Suggested Aug 2013
 =========
 
-- Use css animations to slide tiles, with JS fallback when no css transition support avaialble
-- Detect touch device and bind to tap not click where possible and possible abiity to drag tiles
+- Use css animations to slide tiles, with JS fallback when no css transition support available
+- Detect touch device and bind to tap not click where possible and possible ability to drag tiles
 - Scramble tiles slower and possibly make into a nicer animation you see after puzzle initialized
-- Need to make reponsive so possibly add a redraw function for when a window resize happens. Alternatively re-investigate using % based fluid widths which appeared to be problematic when using for background image positions.  
