@@ -1,17 +1,34 @@
-tilePuzzle
-==========
+# tilePuzzle
 
 [![Code Climate](https://codeclimate.com/github/matthewfedak/tilePuzzle/badges/gpa.svg)](https://codeclimate.com/github/matthewfedak/tilePuzzle)
 
-tilePuzzle is a simple sliding tile puzzle jQuery Plugin. All you need to do is bind the plugin to an empty div, pass in a level (3+) and an image url and a tilePuzzle will be created.
+*A simple sliding tile puzzle game jQuery*
 
-A live demo is at:
+### Demo
+Check out the [demo](http://matthewfedak.co.uk/tilePuzzle) here.
 
-http://matthewfedak.co.uk/tilePuzzle
+### Usage
+HTML
+```html
+<div id="puzzle"></div>
+```
+JS
+```javascript
+    $(document).ready(function(){
+        $('#puzzle').tilePuzzle({
+            'level': 4,
+            'maxWidth': 300,
+            'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg'
+        });
+    });
+```
 
-Improvements Suggested Aug 2013
-=========
+### Plugin Options
+- **level**: An integer *(3+)*
+- **maxWidth**: width of puzzle *(px)*
+- **imageUrl**: An image URL
 
-- Use css animations to slide tiles, with JS fallback when no css transition support available
-- Detect touch device and bind to tap not click where possible and possible ability to drag tiles
-- Scramble tiles slower and possibly make into a nicer animation you see after puzzle initialized
+## License
+
+tilePuzzle is available under the [MIT license](http://opensource.org/licenses/MIT).
+The photo of Christ the Redeemer in Rio De Janerio was taken by me August 2012.
