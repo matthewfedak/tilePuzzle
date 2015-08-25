@@ -2,25 +2,23 @@
 
 [![Code Climate](https://codeclimate.com/github/matthewfedak/tilePuzzle/badges/gpa.svg)](https://codeclimate.com/github/matthewfedak/tilePuzzle)
 
-*A simple sliding tile puzzle game jQuery*
+*A simple sliding tile puzzle game jQuery plugin*
 
-### Demo
+### Working Demo
 Check out the [demo](http://matthewfedak.co.uk/tilePuzzle) here.
 
-### Usage
-HTML
+### Example Usage
+HTML - Create a div element to bind the plugin to:
 ```html
 <div id="puzzle"></div>
 ```
-JS
+JS - Bind the plugin to your element and pass some config parameters
 ```javascript
-    $(document).ready(function(){
-        $('#puzzle').tilePuzzle({
-            'level': 4,
-            'maxWidth': 300,
-            'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg'
-        });
-    });
+$('#puzzle').tilePuzzle({
+    'level': 4,
+    'maxWidth': 300,
+    'imageUrl': 'images/cristo-redentor-rio-de-janeiro-brazil.jpg'
+});
 ```
 
 ### Plugin Options
