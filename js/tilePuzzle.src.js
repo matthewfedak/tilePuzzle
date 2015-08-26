@@ -52,7 +52,7 @@
 
                 _this.container.on('click', 'li', function () {
 
-                    _this.moveTile($(this), $(this).css('top'), $(this).css('left'));
+                    _this.moveTile(this, this.style.top, this.style.left);
 
                 });
 
@@ -121,11 +121,9 @@
 
                 }
 
-                _this.container
+                _this.spareTile = _this.container
                     .children(':last-child')
-                    .addClass('spare');
-
-                _this.spareTile = _this.container.find('.spare');
+                    .addClass('spare')[0];
 
                 self.css({
                     'width': _this.imageDimensions.width,
@@ -181,21 +179,17 @@
 
                 _this = this;
 
-                topDistance = Math.abs(parseInt(top, 10) - parseInt(_this.spareTile.css('top'), 10));
+                topDistance = Math.abs(parseInt(top, 10) - parseInt(_this.spareTile.style.top, 10));
 
-                leftDistance = Math.abs(parseInt(left, 10) - parseInt(_this.spareTile.css('left'), 10));
+                leftDistance = Math.abs(parseInt(left, 10) - parseInt(_this.spareTile.style.left, 10));
 
                 if ((leftDistance + topDistance) <= Math.round(_this.tileDimensions.width) || (leftDistance + topDistance) <= Math.round(_this.tileDimensions.height)) {
 
-                    tile.css({
-                        'top': _this.spareTile.css('top'),
-                        'left': _this.spareTile.css('left')
-                    });
+                    tile.style.top = _this.spareTile.style.top;
+                    tile.style.left = _this.spareTile.style.left;
 
-                    _this.spareTile.css({
-                        'left': left,
-                        'top': top
-                    });
+                    _this.spareTile.style.top = top;
+                    _this.spareTile.style.left = left;
 
                 }
             }
