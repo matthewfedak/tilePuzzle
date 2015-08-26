@@ -14,7 +14,7 @@
 
     $.fn.tilePuzzle = function (options) {
 
-        var self = $(this);
+        var $parent = $(this);
 
         var tilePuzzle = null;
 
@@ -41,7 +41,7 @@
 
                 _this.container = $('<ul/>').addClass(tilePuzzle.tileContainerClass);
 
-                self.append(_this.container);
+                $parent.append(_this.container);
 
                 if (tilePuzzle.level < 3) {
 
@@ -125,7 +125,7 @@
                     .children(':last-child')
                     .addClass('spare')[0];
 
-                self.css({
+                $parent.css({
                     'width': _this.imageDimensions.width,
                     'height': _this.imageDimensions.height
                 }).fadeIn();
@@ -199,7 +199,7 @@
 
         tilePuzzle.init();
 
-        return self;
+        return $parent;
     };
 
 }(jQuery));
