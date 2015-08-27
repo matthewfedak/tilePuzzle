@@ -1,7 +1,7 @@
 /*
  * tilePuzzle.src.js
  *
- * A simple tile puzzle jQuery plugin by @matthewfedak
+ * A simple tile puzzle jQuery plugin by the one @matthewfedak
  *
  */
 
