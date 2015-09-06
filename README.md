@@ -1,6 +1,8 @@
 # tilePuzzle
 
 [![Code Climate](https://codeclimate.com/github/matthewfedak/tilePuzzle/badges/gpa.svg)](https://codeclimate.com/github/matthewfedak/tilePuzzle)
+ 
+[![Build Status](https://travis-ci.org/matthewfedak/tilePuzzle.svg?branch=master)](https://travis-ci.org/matthewfedak/tilePuzzle)
 
 *A simple sliding tile puzzle game jQuery plugin*
 
