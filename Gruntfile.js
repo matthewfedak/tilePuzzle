@@ -34,9 +34,21 @@ module.exports = function (grunt) {
         watch: {
             tilePuzzleJs: {
                 files: 'js/*.js',
-                tasks: ['vars', 'concat:tilePuzzleJs', 'uglify:tilePuzzleJs'],
+                tasks: ['vars', 'jasmine:test', 'concat:tilePuzzleJs', 'uglify:tilePuzzleJs'],
                 options: {
 
+                }
+            }
+        },
+        jasmine: {
+            test: {
+                src: 'js/*.js',
+                options: {
+                    vendor: [
+                        'bower_components/jquery/dist/jquery.js',
+                        'bower_components/jasmine-jquery/lib/jasmine-jquery.js'
+                    ],
+                    specs: 'test/*.spec.js'
                 }
             }
         }
@@ -46,6 +58,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jasmine');
 
     grunt.registerTask('vars', function () {
         grunt.config.set('tilePuzle', grunt.tilePuzzle);

@@ -28,6 +28,3 @@
 .tiles :last-child:hover{
     opacity: 0;
 }
-.tilePuzzle {
-    display: none;
-}
