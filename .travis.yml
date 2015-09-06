@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "0.9"
+branches:
+  only:
+  - master
+before_script:
+  - npm install -g bower
+  - bower install
+  - npm install -g grunt-cli

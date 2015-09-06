@@ -68,4 +68,7 @@ module.exports = function (grunt) {
 
     // the default task can be run just by typing "grunt" on the command line
     grunt.registerTask('default', ['vars', 'concat', 'uglify', 'clean']);
+
+    // Travis CI task.
+    grunt.registerTask('travis', ['vars', 'jasmine:test']);
 };

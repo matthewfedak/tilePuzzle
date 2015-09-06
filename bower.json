@@ -1,0 +1,19 @@
+{
+  "name": "tilePuzzle",
+  "version": "0.1.0",
+  "authors": [
+    "Matt Fedak <me@matthewfedak.co.uk>"
+  ],
+  "description": "A simple sliding tile puzzle game jQuery plugin",
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test"
+  ],
+  "dependencies": {
+    "jasmine-jquery": "2.1.0"
+  }
+}
