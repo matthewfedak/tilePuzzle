@@ -33,7 +33,7 @@ module.exports = function (grunt) {
         },
         watch: {
             tilePuzzleJs: {
-                files: 'js/*.js',
+                files: ['js/*.js', 'test/*'],
                 tasks: ['vars', 'jasmine:test', 'concat:tilePuzzleJs', 'uglify:tilePuzzleJs'],
                 options: {
 
