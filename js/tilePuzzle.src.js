@@ -167,8 +167,11 @@
                         i++;
                         if (i > limit) {
                             clearInterval(timer);
+                            setTimeout(function () {
+                                _this.container.addClass('in-play');
+                            }, 250);
                         }
-                    }, 50);
+                    }, 25);
                 }, 1000);
 
             },
