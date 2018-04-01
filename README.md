@@ -13,7 +13,7 @@
 
 ## Demo
 
-A working demo can be viewed on my site [demo](http://matthewfedak.co.uk/tilePuzzle) here.
+A working demo can be viewed on my site [demo](http://static.matthewfedak.co.uk/tilePuzzle/index.html) here.
 
 ## Example
 
